@@ -18,4 +18,5 @@ spring:
 logging:
   level:
     org.hibernate.SQL: debug
+    # org.hibernate.type: trace    # JPA 쿼리의 파라미터가 표시되도록 (쿼리 뒤에 parameter를 알려줌) P6Spy 외부라이브러리 사용으로 주석처리
     

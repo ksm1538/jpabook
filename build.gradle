@@ -28,7 +28,12 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	
-	//JUnit4 추가
+	
+	// JPA 쿼리 로그 파라미터 보이도록
+	// p6spy. 이러한 외부라이브러리를 사용 시, 운영에서는 고려해봐야함. (성능 이슈 발생 가능)
+	implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.5.6'
+	
+	// JUnit4 추가
 	testImplementation("org.junit.vintage:junit-vintage-engine") {
 	exclude group: "org.hamcrest", module: "hamcrest-core"
 	}
