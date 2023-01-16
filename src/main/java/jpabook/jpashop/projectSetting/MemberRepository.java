@@ -10,7 +10,7 @@ public class MemberRepository {
 	@PersistenceContext
 	private EntityManager em;
 
-	public Long save(Member member) {
+	public Long save(Member_2 member) {
 		em.persist(member);
 		
 		// member를 반환하지 않고, member의 id(PK)를 반환하는 이유
@@ -18,8 +18,8 @@ public class MemberRepository {
 		return member.getId();		
 	}
 	
-	public Member find(Long id) {
-		return em.find(Member.class, id);
+	public Member_2 find(Long id) {
+		return em.find(Member_2.class, id);
 	}
 	
 }

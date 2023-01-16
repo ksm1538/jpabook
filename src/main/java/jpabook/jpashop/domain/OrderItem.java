@@ -18,7 +18,7 @@ import lombok.Setter;
 @Getter @Setter
 public class OrderItem {
 	@Id @GeneratedValue
-	@Column(name="oder_item_id")
+	@Column(name="order_item_id")
 	private Long id;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
