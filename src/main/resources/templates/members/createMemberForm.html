@@ -13,6 +13,7 @@
 	
 		<div class="form-group">
 			<label th:for="name">이름</label>
+			<!-- th:field를 사용하면, 해당 input의 id와 name 속성 값을 알아서 generated 해준다. -->
 			<input type="text" th:field="*{name}" class="form-control" placeholder="이름을 입력하세요" 
 				th:class="${#fields.hasErrors('name')}? 'form-control fieldError' : 'form-control'">
 			<p th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Incorrect date</p>
